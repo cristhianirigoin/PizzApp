@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        >
+        <TextView
+            android:id="@+id/tipopizza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Tipo de Pizza"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/tipo_pizza"
+            android:layout_below="@id/tipopizza"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/tipomasa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner"
+            android:text="Tipo de Masa"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tipomasa">
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="radioButtonClicked"
+                android:text="@string/masa_gruesa" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="radioButtonClicked"
+                android:text="@string/masa_delgada" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:onClick="radioButtonClicked"
+                android:text="@string/masa_artesanal" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/dsplayText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="22sp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/complementos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/radioGroup"
+            android:text="Complementos"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/complementos"
+            android:onClick="androidCheckBoxClicked"
+            android:text="Extra queso mozzarella S/. 4.00" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkBox"
+            android:onClick="androidCheckBoxClicked"
+            android:text="Extra jamón S/. 8.00" />
+        <Button
+            android:id="@+id/ordenar_but"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/button_border"
+            android:onClick="ordenar"
+            android:text="@string/Btn_Ordenar" />
+    </RelativeLayout>
+</LinearLayout >

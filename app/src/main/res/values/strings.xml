@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PizzApp</string>
+    <string name="seleccion">has seleccionado " " </string>
+    <string name="masa_gruesa">con masa gruesa</string>
+    <string name="masa_delgada">con masa delgada</string>
+    <string name="masa_artesanal">con masa artesanal</string>
+    <string name="Btn_Ordenar">Ordenar!</string>
+    <string name="confirmacion">Confirmacion de pedido</string>
+    <string name="pedido">Su pedido de</string>
+
+    <string-array name="tipo_pizza">
+        <item> Americana </item>
+        <item> Pepperoni </item>
+        <item> Hawaiana </item>
+        <item> Meat Lover </item>
+
+    </string-array>
+
+</resources>
